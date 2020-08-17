@@ -1,0 +1,7 @@
+__pycache__
+*info
+*.pyd
+build/*
+dist/*
+.vscode/*
+.vs/*
