@@ -1,17 +1,16 @@
 # Mesh Renderer (PyTorh version)
 
-This is a PyTorch implementation of tf_mesh_renderer [[paper](https://arxiv.org/abs/1806.06098)][[project](https://github.com/google/tf_mesh_renderer)].
+This is a PyTorch implementation of tf_mesh_renderer [[paper](https://arxiv.org/abs/1806.06098)][[project](https://github.com/google/tf_mesh_renderer)], and has been applied in Game Character Auto-Creation [[paper](https://arxiv.org/abs/2008.07154)].
 
 Different from the original project, this PyTorch version supports `Windows OS` and `CUDA acceleration`.
-
 
 ## How to start
 
 * install
 
 ```cmd
-export TORCH_CUDA_ARCH_LIST=7.0 # required by GTX2080Ti and linux
-git clone xxx(path_to_this_project)
+export TORCH_CUDA_ARCH_LIST=7.0 # may be required by GTX2080Ti
+git clone https://github.com/FuxiCV/pt_mesh_renderer
 cd pt_mesh_renderer
 python setup.py install
 ```
@@ -19,14 +18,15 @@ python setup.py install
 * test
 
 ```cmd
-cd pt_mesh_renderer/pt_mesh_renderer/
+cd pt_mesh_renderer/
 python pt_mesh_renderer_test.py
 ```
 
 * demo
 
 ```cmd
-python example/toy.py
+cd example/
+python toy.py
 ```
 
 * uninstall
@@ -45,7 +45,8 @@ pip uninstall pt_mesh_renderer
 
 ## Citation
 
-If you use this renderer in your research, please cite [original Tensorflow version](http://openaccess.thecvf.com/content_cvpr_2018/html/Genova_Unsupervised_Training_for_CVPR_2018_paper.html "Tensorflow version") and [this PyTorch version](xxx "PyTorch version")
+If you use this renderer in your research, please cite [original Tensorflow version](http://openaccess.thecvf.com/content_cvpr_2018/html/Genova_Unsupervised_Training_for_CVPR_2018_paper.html "Tensorflow version") and [this PyTorch version](https://arxiv.org/abs/2008.07154 "PyTorch version")
+
 ```
 @InProceedings{Genova_2018_CVPR,
   author = {Genova, Kyle and Cole, Forrester and Maschinot, Aaron and Sarna, Aaron and Vlasic, Daniel and Freeman, William T.},
@@ -57,12 +58,13 @@ If you use this renderer in your research, please cite [original Tensorflow vers
 ```
 
 ```
-@InProceedings{SHI_2020_MM,
-  author = {XXX},
-  title = {XXX},
-  booktitle = {XX},
-  month = {XXX},
-  year = {2020}
+@misc{shi2020neutral,
+    title={Neutral Face Game Character Auto-Creation via PokerFace-GAN},
+    author={Tianyang Shi and Zhengxia Zou and Xinhui Song and Zheng Song and Changjian Gu and Changjie Fan and Yi Yuan},
+    year={2020},
+    eprint={2008.07154},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
 }
 ```
 
